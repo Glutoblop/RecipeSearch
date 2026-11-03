@@ -17,3 +17,6 @@ Thumbs.db
 # NuGet
 packages/
 *.nupkg
+
+# Release build output
+release/out/
