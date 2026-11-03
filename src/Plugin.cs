@@ -11,7 +11,7 @@ namespace RecipeSearch
     {
         public const string Guid = "jordan.valheim.recipesearch";
         public const string Name = "Recipe Search";
-        public const string Version = "0.2.0";
+        public const string Version = "0.2.1";
 
         internal static Plugin Instance;
 

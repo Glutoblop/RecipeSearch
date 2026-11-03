@@ -3,7 +3,7 @@
   "id": "RecipeSearch",
   "name": "Recipe Search",
   "guid": "jordan.valheim.recipesearch",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Glutoblop",
   "description": "Adds a fuzzy search box above the crafting recipe list so you can find any recipe by typing part of its name.",
   "repo": "Glutoblop/RecipeSearch",
