@@ -26,6 +26,8 @@ Scrolling through a workbench's recipe list gets old fast. Recipe Search adds a 
 Download the [**Valheim Mod Installer**](https://github.com/Glutoblop/ValheimPlugins) and run it (`Start-Installer.bat` on Windows, `start-installer.sh` on Linux/macOS), point it at your Valheim folder, tick **Recipe Search** and click **Install / Update**. It installs BepInEx for you if needed.
 
 ### Manual
+Download from the [latest release](https://github.com/Glutoblop/RecipeSearch/releases/latest) ([`RecipeSearch.zip`](https://github.com/Glutoblop/RecipeSearch/releases/latest/download/RecipeSearch.zip): unzip into your Valheim folder), or:
+
 1. Install [BepInExPack_Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/) (5.4.2360 or newer) into your Valheim folder.
 2. Download [`dist/RecipeSearch.dll`](https://github.com/Glutoblop/RecipeSearch/raw/main/dist/RecipeSearch.dll).
 3. Copy it to `<Valheim>/BepInEx/plugins/RecipeSearch/RecipeSearch.dll`.
