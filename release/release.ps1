@@ -70,7 +70,16 @@ $pluginJson = Join-Path $pluginDir 'plugin.json'
 $pluginCs   = Join-Path $pluginDir 'src\Plugin.cs'
 
 if ($BuildOnly) {
-    if (-not $SkipBuild) { Step "Building $pluginName"; Invoke-Build }
+    if (-not $SkipBuild) {
+        Step "Building $pluginName"
+        # Builds aren't byte-identical, so only rebuild when the source is newer than dist\ -
+        # otherwise a build-only run leaves an uncommitted DLL change that blocks the next release.
+        $csproj = Get-ChildItem $pluginDir -Filter *.csproj | Select-Object -First 1
+        $dll = Get-ChildItem (Join-Path $pluginDir 'dist') -Filter *.dll -ErrorAction SilentlyContinue | Select-Object -First 1
+        $inputs = @(Get-ChildItem (Join-Path $pluginDir 'src') -Recurse -File -ErrorAction SilentlyContinue) + @($csproj)
+        $newest = ($inputs | Measure-Object LastWriteTimeUtc -Maximum).Maximum
+        if ($dll -and $dll.LastWriteTimeUtc -ge $newest) { Write-Host "  up to date" } else { Invoke-Build }
+    }
 } else {
     Step 'Checking repo is committed and pushed'
     Assert-GitClean $pluginDir
