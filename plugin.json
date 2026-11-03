@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "id": "RecipeSearch",
+  "name": "Recipe Search",
+  "guid": "jordan.valheim.recipesearch",
+  "version": "0.2.0",
+  "author": "Glutoblop",
+  "description": "Adds a fuzzy search box above the crafting recipe list so you can find any recipe by typing part of its name.",
+  "repo": "Glutoblop/RecipeSearch",
+  "branch": "main",
+  "client_only": true,
+  "files": [
+    "dist/RecipeSearch.dll"
+  ],
+  "install_dir": "BepInEx/plugins/RecipeSearch",
+  "requires": {
+    "BepInExPack_Valheim": "5.4.2360"
+  },
+  "valheim": {
+    "version": "1.0.21",
+    "network_version": 41,
+    "steam_build": 26249040,
+    "last_tested": "2026-11-03"
+  },
+  "changelog": {
+    "0.2.0": "Fuzzy recipe search box above the crafting list, optional prefab-name matching, craftable-first sorting."
+  }
+}
