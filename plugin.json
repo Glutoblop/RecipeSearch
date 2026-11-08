@@ -3,7 +3,7 @@
   "id": "RecipeSearch",
   "name": "Recipe Search",
   "guid": "jordan.valheim.recipesearch",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Glutoblop",
   "description": "Adds a fuzzy search box above the crafting recipe list so you can find any recipe by typing part of its name.",
   "repo": "Glutoblop/RecipeSearch",
@@ -23,6 +23,7 @@
     "last_tested": "2026-11-03"
   },
   "changelog": {
+    "0.2.2": "Mod Settings button in the pause menu: change this plugin's settings in game (one tab per plugin).",
     "0.2.0": "Fuzzy recipe search box above the crafting list, optional prefab-name matching, craftable-first sorting."
   }
 }
